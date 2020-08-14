@@ -2,7 +2,6 @@ import discord
 import time
 import asyncio
 
-#id = 743004439304077384
 messages = joined = 0
 
 def read_token():
@@ -38,7 +37,7 @@ async def update_stats():
 async def on_member_join(member):
     global joined
     joined += 1
-    channel = member.guild.get_channel(743741326712897579)
+    channel = member.guild.get_channel(YOUR_CHANNEL_ID)
     await channel.send(f"Welcome to the server {member.mention}")
 
 
@@ -47,7 +46,7 @@ async def on_message(message):
     global messages
     messages += 1
 
-    id = client.get_guild(743004439304077384)
+    id = client.get_guild(YOUR_CHANNEL_ID)
     channels = ["commands"]
     valid_users = ["Tech With Omar#6326"]
 
